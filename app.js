@@ -8,12 +8,17 @@ for (let i = 1; i < 50; i++) {
   }
  //şanslı sayıları belirleyelim
 let toplar = []
-let sayi=0
-for(let i=0 ;i<6;i++){
-    sayi=Math.floor(Math.random()*49)+1
-    if(toplar.indexOf(sayi)==-1){
-        toplar.push(sayi)
-    }
+let sayi = 0
+
+while (toplar.length < 6) {
+  sayi = Math.floor(Math.random() * 49) + 1
+
+  if (!toplar.includes(sayi)) {
+    toplar.push(sayi)
+  }
+}
+
+console.log(toplar);
 
 }
 //fonksiyonu oluşturalım
@@ -32,5 +37,6 @@ let myButton = document.getElementById('myButton');
 myButton.addEventListener('click', function() {
   highlightElements()  
     console.log('Butona tıklandı!');
+    console.log(toplar)
   });
 
