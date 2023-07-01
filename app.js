@@ -20,7 +20,6 @@ while (toplar.length < 6) {
 
 console.log(toplar);
 
-}
 //fonksiyonu oluşturalım
 function highlightElements() {
     const elements = document.querySelectorAll('.top')
