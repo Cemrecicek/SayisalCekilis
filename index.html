@@ -1,23 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sayısal Çekiliş Oyunu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1 class="title">🎲 Sayısal Çekiliş Oyunu 🎲</h1>
+        </header>
+        
+        <main>
+            <!-- Kullanıcı Sayı Seçim Bölümü -->
+            <section class="card user-selection">
+                <h2>Sayılarınızı Seçin</h2>
+                <div class="selected-display" id="selectedNumbers">
+                    <span class="placeholder">6 sayı seçiniz</span>
+                </div>
+                <div class="number-picker" id="userNumberGrid"></div>
+                <div class="controls">
+                    <button id="clearBtn" class="btn btn-clear">Temizle</button>
+                    <button id="randomBtn" class="btn btn-random">Rastgele Seç</button>
+                </div>
+            </section>
 
+            <!-- Çekiliş Bölümü -->
+            <section class="card draw-section">
+                <h2>Çekiliş Sonuçları</h2>
+                <div class="draw-container">
+                    <div class="loading-animation" id="spinningBalls">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                    </div>
+                    <div class="results-display" id="drawnNumbers"></div>
+                </div>
+                <div class="controls">
+                    <button id="drawBtn" class="btn btn-draw">Çekiliş Başlat</button>
+                    <button id="resetBtn" class="btn btn-reset">Yeniden Başla</button>
+                </div>
+            </section>
 
-
-<div class="piyango">
-</div>
-<div class="sec">
-    <button id="myButton">Sayıları Seç!</button>
-</div>
-
-
-
+            <!-- Sonuç Bölümü -->
+            <section class="card result-section" id="resultCard">
+                <h2>Sonuçlar</h2>
+                <div class="result-content" id="matchInfo"></div>
+            </section>
+        </main>
+    </div>
 
     <script src="app.js"></script>
 </body>
