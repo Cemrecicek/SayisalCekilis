@@ -188,18 +188,7 @@ function handleKeyboardInput(e) {
     if (isDrawing) return;
     
     const key = e.key;
-    
-    //sayılar
-    if (key >= '1' && key <= '9') {
-        const number = parseInt(key);
-        if (number >= 1 && number <= GAME_CONFIG.totalNumbers) {
-            const element = Array.from(document.querySelectorAll('.number'))
-                .find(el => parseInt(el.textContent) === number);
-            if (element) selectNumber(number, element);
-        }
-    }
-    
-    
+  
     if (key === 'Enter' && userNumbers.length === GAME_CONFIG.selectCount) {
         drawNumbers();
     }
@@ -230,7 +219,7 @@ function initializeGame() {
     
     //alertle biliglendirme kısmı
     setTimeout(() => {
-        alert(`🎲 Sayısal Çekiliş Oyununa Hoş Geldiniz! 🎲\n\n• 6 sayı seçin veya "Rastgele Seç" butonuna basın\n• "Çekiliş Başlat" butonuna basarak çekilişi başlatın\n• Klavye ile de sayı seçebilirsiniz (1-49)\n• Enter tuşu ile çekiliş yapabilirsiniz\n• Space tuşu ile rastgele seçim yapabilirsiniz`);
+        alert(`🎲 Sayısal Çekiliş Oyununa Hoş Geldiniz! 🎲\n\n• 6 sayı seçin veya "Rastgele Seç" butonuna basın\n• "Çekiliş Başlat" butonuna basarak çekilişi başlatın\n• Enter tuşu ile çekiliş yapabilirsiniz\n• Space tuşu ile rastgele seçim yapabilirsiniz`);
     }, 500);
 }
 
